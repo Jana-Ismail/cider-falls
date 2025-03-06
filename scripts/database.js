@@ -78,7 +78,25 @@ const database = {
     ]
   };
 
-// This module will define and export a getter function for each Resource that
-// returns a copy of the array of objects
-// There will be four getter functions: 1 for ParkAreas, 1 for Services, 1 for ParkAreaServices, and 1 for Guests
+// Define and export a getter function for each entity
+// Each getter function will return a copy of the array of objects
 // Each getter function will have no parameters, and it will reference the `database` object inside the body of the function
+
+// parkAreas getter function
+export const getParkAreas = () => {
+    return database.parkAreas.map(parkArea => ({...parkArea}))
+}
+
+// services getter function
+export const getServices = () => {
+    return database.services.map(service => ({...service}))
+}
+
+// guests getter function
+export const getGuests = () => {
+    return database.guests.map(guest => ({...guest}))
+}
+
+export const getParkAreaServices = () => {
+    return database.parkAreaServices.map(parkAreaService => ({...parkAreaService}))
+}
