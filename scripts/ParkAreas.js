@@ -9,9 +9,9 @@ const services = getServices()
 
 // Define and export a function to generate html sections for each ParkArea entity in the `database` object
 const ParkAreaSections = () => {
-    // The function will map through the parkAreas array,
-    // generating html for each Park Area title as well as its Park Area Services, and join it into a single string of hmtl.
-    let html = `<section class"park-area-section">`
+    // Map through the parkAreas array,
+    // generating html for each Park Area title + its Park Area Services, and join it into a single string of html.
+    let html = ""
 
     html += parkAreas.map(parkArea => {
         // Call findParkAreaServices() to find the services for the current parkArea being mapped
@@ -20,16 +20,15 @@ const ParkAreaSections = () => {
         // Call getServicesData() to get the full object for each service with the serviceId in the parkAreaServicesArr returned by the findParkAreaServices function
         const parkAreaServicesData = getServicesData(services, foundParkAreaServices)
         return `
-            <h2 class="park-area-title">${parkArea.title}</h2>
+        <section class"park-area-section" id="${parkArea.id}">
+            <h3 class="park-area-title">${parkArea.title}</h2>
             <ul class="park-area-services-list>
-                ${parkAreaServicesData.map(service => `<li>${service.name}</li>`)}
+                ${parkAreaServicesData.map(service => `<li id="${service.id}">${service.name}</li>`)}
             </ul>
-            
+        </section>
         `
     }).join("")
-
-    html += `</section>`
     
-    // The function will return the string of html.
+    // Return the string of html.
     return html
 }
