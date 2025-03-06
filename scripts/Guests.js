@@ -7,7 +7,7 @@ import { getGuests } from "./database.js";
 
 const guests = getGuests()
 
-export const GuestListAside = () => {
+export const GuestList = () => {
     // Declare and initialize an html variable to an <aside> container
     let html = ``
 
