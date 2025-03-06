@@ -8,7 +8,7 @@ const parkAreaServices = getParkAreaServices()
 const services = getServices()
 
 // Define and export a function to generate html sections for each ParkArea entity in the `database` object
-const ParkAreaSections = () => {
+export const ParkAreaSections = () => {
     // Map through the parkAreas array,
     // generating html for each Park Area title + its Park Area Services, and join it into a single string of html.
     let html = ""
@@ -23,7 +23,7 @@ const ParkAreaSections = () => {
         <section class"park-area-section" id="${parkArea.id}">
             <h3 class="park-area-title">${parkArea.title}</h2>
             <ul class="park-area-services-list>
-                ${parkAreaServicesData.map(service => `<li id="${service.id}">${service.name}</li>`)}
+                ${parkAreaServicesData.map(service => `<li id="${service.id}">${service.name}</li>`).join("")}
             </ul>
         </section>
         `
