@@ -18,7 +18,7 @@ export const GuestList = () => {
         return `
             <li class="guest-list-item" id="${guest.id}">${guest.firstName} ${guest.lastName}</li>
         `
-    }).join()
+    }).join("")
 
     return html
 }

@@ -25,24 +25,24 @@ const database = {
       { id: 10, name: "Zip Lines" }
     ],
     parkAreaServices: [
-      { id: 1, parkAreaId: 1, servicesId: 1 }, // The Lodge - Lodging
-      { id: 2, parkAreaId: 1, servicesId: 2 }, // The Lodge - Parking
-      { id: 3, parkAreaId: 1, servicesId: 3 }, // The Lodge - Information
-      { id: 4, parkAreaId: 1, servicesId: 4 }, // The Lodge - Picnicking
-      { id: 5, parkAreaId: 2, servicesId: 5 }, // Lost Wolf Hiking Trail - Hiking
-      { id: 6, parkAreaId: 2, servicesId: 4 }, // Lost Wolf Hiking Trail - Picnicking
-      { id: 7, parkAreaId: 2, servicesId: 6 }, // Lost Wolf Hiking Trail - Rock Climbing
-      { id: 8, parkAreaId: 3, servicesId: 7 }, // Chamfort River - Rafting
-      { id: 9, parkAreaId: 3, servicesId: 8 }, // Chamfort River - Canoeing
-      { id: 10, parkAreaId: 3, servicesId: 9 }, // Chamfort River - Fishing
-      { id: 11, parkAreaId: 4, servicesId: 9 }, // Gander River - Fishing
-      { id: 12, parkAreaId: 4, servicesId: 5 }, // Gander River - Hiking
-      { id: 13, parkAreaId: 5, servicesId: 3 }, // Campgrounds - Information
-      { id: 14, parkAreaId: 5, servicesId: 1 }, // Campgrounds - Lodging
-      { id: 15, parkAreaId: 5, servicesId: 2 }, // Campgrounds - Parking
-      { id: 16, parkAreaId: 6, servicesId: 5 }, // Pine Bluff Trails - Hiking
-      { id: 17, parkAreaId: 6, servicesId: 4 }, // Pine Bluff Trails - Picnicking
-      { id: 18, parkAreaId: 6, servicesId: 10 } // Pine Bluff Trails - Zip Lines
+      { id: 1, parkAreaId: 1, serviceId: 1 }, // The Lodge - Lodging
+      { id: 2, parkAreaId: 1, serviceId: 2 }, // The Lodge - Parking
+      { id: 3, parkAreaId: 1, serviceId: 3 }, // The Lodge - Information
+      { id: 4, parkAreaId: 1, serviceId: 4 }, // The Lodge - Picnicking
+      { id: 5, parkAreaId: 2, serviceId: 5 }, // Lost Wolf Hiking Trail - Hiking
+      { id: 6, parkAreaId: 2, serviceId: 4 }, // Lost Wolf Hiking Trail - Picnicking
+      { id: 7, parkAreaId: 2, serviceId: 6 }, // Lost Wolf Hiking Trail - Rock Climbing
+      { id: 8, parkAreaId: 3, serviceId: 7 }, // Chamfort River - Rafting
+      { id: 9, parkAreaId: 3, serviceId: 8 }, // Chamfort River - Canoeing
+      { id: 10, parkAreaId: 3, serviceId: 9 }, // Chamfort River - Fishing
+      { id: 11, parkAreaId: 4, serviceId: 9 }, // Gander River - Fishing
+      { id: 12, parkAreaId: 4, serviceId: 5 }, // Gander River - Hiking
+      { id: 13, parkAreaId: 5, serviceId: 3 }, // Campgrounds - Information
+      { id: 14, parkAreaId: 5, serviceId: 1 }, // Campgrounds - Lodging
+      { id: 15, parkAreaId: 5, serviceId: 2 }, // Campgrounds - Parking
+      { id: 16, parkAreaId: 6, serviceId: 5 }, // Pine Bluff Trails - Hiking
+      { id: 17, parkAreaId: 6, serviceId: 4 }, // Pine Bluff Trails - Picnicking
+      { id: 18, parkAreaId: 6, serviceId: 10 } // Pine Bluff Trails - Zip Lines
     ],
     guests: [
       { id: 1, firstName: "Alice", lastName: "Smith", parkAreaId: 3 },
