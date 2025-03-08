@@ -22,3 +22,23 @@ export const getServicesData = (servicesArr, foundParkAreaServicesArr) => {
 
     return parkAreaServiceData
 }
+
+export const findParkAreaServicesFromServiceId = (serviceId, parkAreaServicesArr) => {
+    const foundParkAreaServices = parkAreaServicesArr.filter(parkAreaService => parkAreaService.serviceId === serviceId)
+
+    return foundParkAreaServices
+}
+
+export const getParkAreasData = (parkAreasArr, foundParkAreaServicesArr) => {
+    const parkAreaServiceData = []
+
+    for (const parkAreaService of foundParkAreaServicesArr) {
+        for (const parkArea of parkAreasArr) {
+            if (parkAreaService.parkAreaId === parkArea.id) {
+                parkAreaServiceData.push(parkArea)
+            }
+        }
+    }
+
+    return parkAreaServiceData
+}
