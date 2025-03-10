@@ -1,6 +1,6 @@
 // Import the ParkAreas, Services, ParkAreaServices, and Guests getter functions from `database.js`
 import { getGuests, getParkAreaServices, getParkAreas, getServices } from "./database.js"
-import { findParkAreaServices, getServicesData } from "./ParkAreaServices.js"
+import { findParkAreaServicesFromParkAreaId, getServicesData } from "./ParkAreaServices.js"
 
 // Call getParkAreas, getParkAraServices, and getServices and store each returned array of objects copy in a new variable
 const parkAreas = getParkAreas()
@@ -15,7 +15,7 @@ export const ParkAreaSections = () => {
 
     html += parkAreas.map(parkArea => {
         // Call findParkAreaServices() to find the services for the current parkArea being mapped
-        const foundParkAreaServices = findParkAreaServices(parkArea.id, parkAreaServices)
+        const foundParkAreaServices = findParkAreaServicesFromParkAreaId(parkArea.id, parkAreaServices)
 
         // Call getServicesData() to get the full object for each service with the serviceId in the parkAreaServicesArr returned by the findParkAreaServices function
         const parkAreaServicesData = getServicesData(services, foundParkAreaServices)
@@ -26,7 +26,7 @@ export const ParkAreaSections = () => {
                 data-park-area-id="${parkArea.id}"
             >${parkArea.title}</h3>
             <ul class="park-area-services-list">
-                ${parkAreaServicesData.map(service => `<li id="${service.id}">${service.name}</li>`).join("")}
+                ${parkAreaServicesData.map(service => `<li id="${service.id}" class="park-area-service-item">${service.name}</li>`).join("")}
             </ul>
         </section>
         `

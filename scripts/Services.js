@@ -24,9 +24,6 @@ document.addEventListener(
     (clickEvt) => {
         const clickTarget = clickEvt.target
 
-        const parkAreas = getParkAreas()
-        const parkAreaServices = getParkAreaServices()
-
         if (clickTarget.dataset.type === "service") {
             // console.log("clicked!")
             // First, get the id of the park service that was clicked on

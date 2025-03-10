@@ -1,0 +1,103 @@
+:root {
+    --color1: #3a3a3a;
+    --color2: #FFFFFF;
+    --color3: #a9a9a9;
+    --color4: #151515;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color3);
+    color: var(--color4);
+    padding: 5px;
+    margin: 5px;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #063a06;
+    color: white;
+}
+
+.header {
+    background-color: #063a06;
+    color: white;
+    display: flex;
+}
+
+.logo-container {
+    background-color: var(--color3);
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+
+#park-name {
+    margin: auto 20px;
+}
+
+.services-list {
+    background-color: green;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.park-areas-section {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color4);
+    width: 70%;
+}
+
+.park-areas-section-header {
+    border: 1px solid var(--color4);
+    padding: 0 10px;
+}
+
+.park-area-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2px;
+    width: 100%;
+}
+
+.park-area-section {
+    border: 1px solid var(--color4);
+    width: 30%;
+}
+
+.park-area-title {
+    text-align: center;
+    padding: 0 10px;
+}
+
+.park-area-service-item {
+    list-style-type: none;
+}
+
+.guest-list-section {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    width: 30%;
+}
+
+.guest-list-header {
+    padding: 0 10px;
+}
+
+.guest-list-item {
+    margin: 5px 10px;
+    padding: 0 10px;
+    list-style-type: none;
+}

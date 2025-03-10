@@ -13,14 +13,20 @@ const mainContainerHTML = `
     <section class="services-list-section">
         ${ServicesList()}
     </section>
-    <section class="park-areas-section">
-        <h2 class="park-area-sections-header">Park Areas</h2>
-            ${ParkAreaSections()}
-    </section
-    <section class="guest-list-section">
-        <h2 class="guest-list-header">Guests In Park</h2>
-            ${GuestList()}
-    </section>
+    <div class="container">
+        <section class="park-areas-section">
+            <h2 class="park-areas-section-header">Park Areas</h2>
+            <div class="park-area-sections">
+                ${ParkAreaSections()}
+            </div>
+        </section>
+        <section class="guest-list-section">
+            <h2 class="guest-list-header">Guests In Park</h2>
+            <div class="guest-list">
+                ${GuestList()}
+            </div>
+        </section>
+    </div>
 `
 
 
